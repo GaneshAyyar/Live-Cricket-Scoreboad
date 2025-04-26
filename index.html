@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Cricket Scoreboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="overlay">
+  <div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+  </div>
+
+  <h1>🏏 Live Cricket Scoreboard</h1>
+
+  <div class="form">
+    <input type="text" id="playerName" placeholder="Player Name">
+    <button onclick="addPlayer()">Add Player</button>
+    <button onclick="removePlayer()">Remove Player</button>
+  </div>
+
+  <div class="form">
+    <input type="text" id="updatePlayerName" placeholder="Update Player">
+    <input type="number" id="runsScored" placeholder="Runs (0,1,2,3)">
+    <button onclick="updateScore()">Update Custom</button>
+    <button onclick="scoreFour()">🏏 Hit 4</button>
+    <button onclick="scoreSix()">🏏 Hit 6</button>
+    <button onclick="markOut()">Mark Out</button>
+  </div>
+
+  <div class="score" id="score">
+    Total Score: 0/0 (0.0 overs)
+  </div>
+
+  <table id="scoreboard">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Runs</th>
+        <th>Balls</th>
+        <th>4s</th>
+        <th>6s</th>
+        <th>Strike Rate</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="commentary" id="commentary">
+    <h2>🎙️ Commentary</h2>
+    <ul id="commentaryList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

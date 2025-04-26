@@ -1,0 +1,173 @@
+/* Import stylish fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images.unsplash.com/photo-1520367745676-c1c27c5c3c56?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+  }
+  
+
+/* Overlay for glassy effect */
+.overlay {
+  background: rgba(0, 0, 0, 0.75);
+  min-height: 100vh;
+  padding: 30px;
+  backdrop-filter: blur(8px);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7;
+  margin-bottom: 20px;
+}
+
+/* Navigation */
+.nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.nav a {
+  text-decoration: none;
+  color: #000;
+  background: #00ffe7;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.nav a:hover {
+  background: #0fffcf;
+}
+
+/* Input / Button form areas */
+.form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 180px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: #00ffe7;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background: #0fffcf;
+}
+
+/* Score summary */
+.score {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
+/* Scoreboard table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+th, td {
+  padding: 14px;
+  text-align: center;
+  color: #fff;
+}
+th {
+  background: #00ffe7;
+  color: #000;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+/* Commentary section */
+.commentary {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.commentary h2 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe7;
+  margin-bottom: 10px;
+}
+.commentary ul {
+  list-style: none;
+  padding: 0;
+}
+.commentary ul li {
+  background: rgba(0, 255, 231, 0.2);
+  margin: 6px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  input, button {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
